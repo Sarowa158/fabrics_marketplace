@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :company
       t.string :address
       t.string :phoneNumber
-      t.string :contact_Person
+      t.string :contactPerson
       t.string :email
       t.string :avatar
 

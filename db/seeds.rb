@@ -6,3 +6,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #   this is a test
+
+Fabric.create!(
+  length: "2,3",
+  content: "rainbow fabric",
+  quality: "high quality",
+  price: "",
+  color: ""
+)
+
+Fabric.create!(
+  length: "",
+  content: "",
+  quality: "",
+  price: "",
+  color: ""
+)
+
+Fabric.create!(
+  length: "",
+  content: "",
+  quality: "",
+  price: "",
+  color: ""
+)
+
+Fabric.create!(
+  length: "",
+  content: "",
+  quality: "",
+  price: "",
+  color: ""
+)
