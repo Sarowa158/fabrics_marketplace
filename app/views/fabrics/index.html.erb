@@ -1,1 +1,26 @@
-<% @fabrics%>
+<div class="all-body">
+  <h2>Choose your favorite fabric:</h2>
+
+
+  <div class="cards-container">
+
+    <% @fabrics.each do |fab| %>
+    <%= link_to fabric_path(fab) do %>
+      <div class="card-trip", fabric_path >
+        <img src="https://images.unsplash.com/photo-1622532470022-24107cac5ef3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=925&q=80" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%=  fab.quality %></h2>
+            <p><%= fab.content %></p>
+
+          </div>
+          <h2 class="card-trip-pricing"><%= fab.price %> $</h2>
+          <img src="https://images.unsplash.com/photo-1532490389938-2856e3f1560a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+    <% end %>
+
+
+  </div>
+</div>
