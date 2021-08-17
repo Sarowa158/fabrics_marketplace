@@ -11,41 +11,46 @@ User.create!(
   address: "California",
   phone_number: "2023498234",
   email: "e@email..com",
-  contact_person: "valeria"
+  contact_person: "adam",
+  avatar: "https://source.unsplash.com/random"
 )
 
 Fabric.create!(
   user_id: 1,
   length: "2,3",
-  content: "rainbow fabric",
+  content: "fancy fabric",
   quality: "high quality",
   price: 14,
-  color: "rainbow"
+  color: "green",
+  link: "https://source.unsplash.com/random"
 )
 
 Fabric.create!(
   user_id: 1,
   length: "3,2",
-  content: "bird fabric",
+  content: "silvery fabric",
   quality: "very robust",
   price: 12,
-  color: "blue"
+  color: "silver",
+  link: "https://source.unsplash.com/random"
 )
 
 Fabric.create!(
   user_id: 1,
   length: "5,6",
-  content: "plants fabrics",
+  content: "leinen fabrics",
   quality: "low quality",
   price: 3,
-  color: "greenish"
+  color: "white",
+  link: "https://source.unsplash.com/random"
 )
 
 Fabric.create!(
   user_id: 1,
   length: "4,3",
-  content: "tree fabrics",
+  content: "dark green fabrics",
   quality: "medium quality",
   price: 9,
-  color: "green"
+  color: "green",
+  link: "https://source.unsplash.com/random"
 )
