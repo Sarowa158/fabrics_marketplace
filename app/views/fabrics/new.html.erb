@@ -1,0 +1,13 @@
+<div class="all-new-body-page">
+  <h1>Upload a new offer:</h1>
+  <div class="form">
+    <%= simple_form_for @fabric do |f| %>
+    <%= f.input :quality, input_html: { class: "nice-class" }, label_html: { class: "nice-class" } %>
+    <%= f.input :content, input_html: { class: "nice-class" }, label_html: { class: "nice-class" } %>
+    <%= f.input :length, input_html: { class: "nice-class" }, label_html: { class: "nice-class" } %>
+    <%= f.input :color, input_html: { class: "nice-class" }, label_html: { class: "nice-class" } %>
+    <%= f.input :price, input_html: { class: "nice-class" }, label_html: { class: "nice-class" } %>
+    <%= f.submit class:"btn btn-warning small" %>
+    <% end %>
+  </div>
+</div>
