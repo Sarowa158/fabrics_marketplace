@@ -1,6 +1,10 @@
-<h1> Here is your product, <%= @fabric.user %></h1>
-<p>Length: <%= @fabric.length %></p>
-<p>Content: <%= @fabric.content %></p>
-<p>Quality: <%= @fabric.quality %></p>
-<p>Price: <%= @fabric.price %></p>
-<p>Color: <%= @fabric.color %></p>
+<div class="container">
+  <h1> Here is your product, <%= @fabric.user.company %></h1>
+  <p>Length: <%= @fabric.length %></p>
+  <p>Content: <%= @fabric.content %></p>
+  <p>Quality: <%= @fabric.quality %></p>
+  <p>Price: <%= @fabric.price %></p>
+  <p>Color: <%= @fabric.color %></p>
+  <p>Color: <%= @fabric.link %></p>
+  <img src="<%= @fabric.link %>" alt="">
+</div>
