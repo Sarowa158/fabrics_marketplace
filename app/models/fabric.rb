@@ -5,4 +5,5 @@ class Fabric < ApplicationRecord
   validates :quality, presence: true
   validates :price, presence: true
   validates :color, presence: true
+  has_one_attached :photo
 end

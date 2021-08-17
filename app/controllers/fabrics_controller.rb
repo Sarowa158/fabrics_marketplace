@@ -23,7 +23,7 @@ class FabricsController < ApplicationController
   private
 
   def fabric_params
-    params.require(:fabric).permit(:length, :content, :quality, :price, :color)
+    params.require(:fabric).permit(:length, :content, :quality, :price, :color, :photo)
   end
 
 end
