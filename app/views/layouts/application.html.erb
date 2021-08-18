@@ -10,12 +10,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
+   <div class="container">
+    <div class="navbar">
+        <img src="https://i.ibb.co/fDhQPPt/logo.png" alt="Logo">
+        <div class="right-links">
+            <% if user_signed_in? %>
+              <%= link_to "New Fabric", new_fabric_path %>
+              <%= link_to "Sign out", destroy_user_session_path %>
+            <% else %>
+              <%= link_to "Sign in", new_user_session_path %>
+              <%= link_to "Sign up", new_user_registration_path %>
+            <% end %>
+        </div>
+    </div>
+
     <%= yield %>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
 </html>

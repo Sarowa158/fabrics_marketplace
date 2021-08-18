@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_095601) do
+ActiveRecord::Schema.define(version: 2021_08_18_122137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,18 +42,18 @@ ActiveRecord::Schema.define(version: 2021_08_18_095601) do
     t.string "quality"
     t.float "price"
     t.string "color"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "link"
-    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_fabrics_on_user_id"
   end
 
   create_table "purchases", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.bigint "fabric_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
     t.index ["fabric_id"], name: "index_purchases_on_fabric_id"
     t.index ["user_id"], name: "index_purchases_on_user_id"
   end
@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(version: 2021_08_18_095601) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company"
+    t.string "address"
+    t.string "phone_number"
+    t.string "contact_person"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
