@@ -13,7 +13,8 @@ class FabricsController < ApplicationController
 
   def create
     @fabric = Fabric.new(fabric_params)
-    if @fabric.save!
+    @fabric.user = current_user
+    if @fabric.save
       redirect_to @fabric, notice: 'List was successfully created'
     else
       render :new

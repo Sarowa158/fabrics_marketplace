@@ -11,7 +11,10 @@
         <%= link_to "Buy now", purchases_path, class: "btn btn-primary" %>
       </div>
       <div class="col">
-        <img src="<%= @fabric.link %>" alt="fabric" class="img-fluid">
+      <%= cl_image_tag(@fabric.photo.key,
+      width: 400, height: 300, crop: :fill, class:'img-fluid') %>
+
+
       </div>
     </div>
   </div>
