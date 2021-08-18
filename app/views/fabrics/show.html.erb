@@ -1,15 +1,18 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1> Here is your product, <%= @fabric.user.company %></h1>
-      <p>Length: <%= @fabric.length %></p>
-      <p>Content: <%= @fabric.content %></p>
-      <p>Quality: <%= @fabric.quality %></p>
-      <p>Price: <%= @fabric.price %></p>
-      <p>Color: <%= @fabric.color %></p>
-    </div>
-    <div class="col">
-      <img src="<%= @fabric.link %>" alt="fabric" class="img-fluid">
+<div class="all-body">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1> Here is your product, <%= @fabric.user.company %></h1>
+        <p>Length: <%= @fabric.length %></p>
+        <p>Content: <%= @fabric.content %></p>
+        <p>Quality: <%= @fabric.quality %></p>
+        <p>Price: <%= @fabric.price %></p>
+        <p>Color: <%= @fabric.color %></p>
+        <%= link_to "Buy now", purchases_path, class: "btn btn-primary" %>
+      </div>
+      <div class="col">
+        <img src="<%= @fabric.link %>" alt="fabric" class="img-fluid">
+      </div>
     </div>
   </div>
 </div>
