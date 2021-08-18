@@ -7,10 +7,12 @@ ruby '2.7.3'
 gem 'rails', '~> 6.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'cloudinary', '~> 1.16.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'dotenv-rails', groups: [:development, :test]
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
