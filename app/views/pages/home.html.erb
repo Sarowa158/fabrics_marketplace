@@ -8,7 +8,6 @@
         <div class="big-title">Latest fabrics</div>
 
            <div class="cards-container">
-            <br>
               <% @fabrics.last(4).each do |fab| %>
               <%= link_to fabric_path(fab) do %>
                 <div class="card-trip", fabric_path >
