@@ -1,0 +1,16 @@
+@import "home";
+.container-martin {
+  grid-template-columns: 1fr 1fr;
+}
+
+.item-1 {
+  grid-column-start: 1;
+}
+
+.item-2 {
+  grid-column-start: 2;
+}
+
+.font {
+  font-size: 500px;
+}
