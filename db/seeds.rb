@@ -25,12 +25,12 @@
 #   avatar: "https://source.unsplash.com/random"
 # )
 User.create!(
-  email: "name@name.com",
+  email: "newname@newname.com",
   password: "123456"
 )
 
 User.create!(
-  email: "utz.seematter@freitag.com",
+  email: "nenene@nenene.com",
   password: "123456"
 )
 
@@ -44,6 +44,9 @@ Fabric.create!(
   length: 2.3,
   content: "thick fabrics from a luxurious brand",
   quality: "9",
+  address: "2519 Barrington Court, 	Joiner",
+  newprice: 10,
+  material: "Silk",
   price: 14,
   color: "green",
   link: "https://source.unsplash.com/random"
@@ -54,6 +57,9 @@ Fabric.create!(
   length: 3.2,
   content: "fine fabrics perfect for light summer dresses",
   quality: "9",
+  address: "2208 Raver Croft Drive, Chattanooga",
+  newprice: 10,
+  material: "Cotton",
   price: 16,
   color: "silver",
   link: "https://source.unsplash.com/random"
@@ -64,6 +70,9 @@ Fabric.create!(
   length: 5.6,
   content: "leinen fabrics",
   quality: "low quality",
+  address: "3051 Hillcrest Circle, Minneapolis",
+  newprice: 2,
+  material: "Sintetic",
   price: 3,
   color: "white",
   link: "https://source.unsplash.com/random"
@@ -74,6 +83,9 @@ Fabric.create!(
   length: 4.3,
   content: "dark green fabrics",
   quality: "medium quality",
+  address: "3939 Wright Court, 	Birmingham",
+  newprice: 2,
+  material: "Sintetic",
   price: 9,
   color: "green",
   link: "https://source.unsplash.com/random"
