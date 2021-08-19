@@ -1,6 +1,14 @@
 class FabricsController < ApplicationController
   def index
     @fabrics = Fabric.all
+
+    @markers = @fabrics.geocoded.map do |fabric|
+      {
+        lat: fabric.latitude,
+        lng: fabric.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { fabric: fabric })
+      }
+    end
   end
 
   def show

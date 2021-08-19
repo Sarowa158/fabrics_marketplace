@@ -1,5 +1,13 @@
-<div class="all-body">
   <h2>Choose your favorite fabric:</h2>
+  <%= form_tag fabrics_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a fabric"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary mt-1" %>
+<% end %>
+<div class="all-body">
 
   <div class="cards-container">
 
@@ -14,7 +22,6 @@
         <div class="card-trip-infos">
           <div>
             <h2><%=  fab.quality %></h2>
-            <p><%= fab.content %></p>
 
           </div>
           <h2 class="card-trip-pricing"><%= fab.price %> $</h2>
@@ -23,10 +30,11 @@
       </div>
       <% end %>
     <% end %>
-
-
-
-
-
   </div>
+
+  <div id="map"
+
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
