@@ -1,7 +1,11 @@
 class FabricsController < ApplicationController
   def index
-    @fabrics = Fabric.all
-
+    if params[:query].present?
+            sql_query = "material ILIKE :query OR color ILIKE :query"
+      @fabrics = Fabric.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @fabrics = Fabric.all
+    end
     @markers = @fabrics.geocoded.map do |fabric|
       {
         lat: fabric.latitude,
