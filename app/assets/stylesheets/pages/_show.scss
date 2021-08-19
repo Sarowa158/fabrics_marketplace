@@ -1,0 +1,23 @@
+@import "home";
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-show-page {
+  max-width: 50px;
+  max-height: 50px ;
+}
+
+.flex-item-grow {
+  flex: 1 0 auto;
+}
+
+.container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.item-a {
+  justify-self: stretch;
+  object-fit: cover;
+}
