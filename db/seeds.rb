@@ -24,6 +24,7 @@
 #   contact_person: "Utz Seematter",
 #   avatar: "https://source.unsplash.com/random"
 # )
+
 User.create!(
   email: "newname@newname.com",
   password: "123456"
@@ -38,6 +39,7 @@ User.create!(
   email: "adam.ternskof@gmail.com",
   password: "123456"
 )
+
 
 Fabric.create!(
   user_id: 1,
@@ -88,5 +90,18 @@ Fabric.create!(
   material: "Sintetic",
   price: 9,
   color: "green",
+  link: "https://source.unsplash.com/random"
+)
+
+Fabric.create!(
+  user_id: 2,
+  length: 3.2,
+  content: "fine fabrics perfect for light summer dresses",
+  quality: "9",
+  address: "Bennechesgate 5b, 0169 Oslo",
+  newprice: 10,
+  material: "Cotton",
+  price: 16,
+  color: "silver",
   link: "https://source.unsplash.com/random"
 )
