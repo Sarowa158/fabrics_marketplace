@@ -1,19 +1,17 @@
 @import "home";
 
 .form {
-  height: 400px;
+  height: 100%;
   width: 70%;
   display: flex;
   justify-content: center;
   background-color: white;
-  border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
   margin-top: 30px;
-  border: solid;
-  border-color: lightgrey;
   padding: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .all-new-body-page {
@@ -30,12 +28,11 @@
 
 .button {
   background-color: rgb(255, 191, 0);
-  border-radius: 7px;
-  border: solid rgb(220, 196, 196);
+  border: solid rgb(228, 225, 225);
   margin-top: 0;
+
 }
 
 .nice-class-photo {
   font-size: 10px;
 }
-
