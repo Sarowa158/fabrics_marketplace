@@ -6,6 +6,7 @@ class PurchasesController < ApplicationController
   def show
     @fabric = Fabric.find(params[:id])
     @me = current_user
+  end
 
   def create
     @purchase = Purchase.new
@@ -18,10 +19,5 @@ class PurchasesController < ApplicationController
         render new_user_session_path
       end
     end
-
   end
 end
-
-
-# @fabric = Fabric.find(params[:fabric_id])
-    # # @fabric = Fabric.where(@fabric.user == current_user)

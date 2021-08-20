@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :email, presence: true
   has_one_attached :photo
+  has_many :purchases
 end
