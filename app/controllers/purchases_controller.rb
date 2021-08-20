@@ -5,11 +5,15 @@ class PurchasesController < ApplicationController
     @purchase.fabric = Fabric.find(params[:fabric_id])
     if current_user
       if @purchase.save!
-        redirect_to root_path, notice: "Congrats #{current_user.email}! You purchased #{@purchase.fabric.content}!"
+        redirect_to purchase_path(@purchase), notice: "Congrats #{current_user.email}! You purchased #{@purchase.fabric.content}!"
       else
         render new_user_session_path
       end
     end
+  end
+
+  def show
+    @purchase = Purchase.find(params[:id])
   end
 end
 
