@@ -27,24 +27,34 @@
 
 User.create!(
   email: "newname@newname.com",
-  password: "123456"
+  password: "123456",
+  username: "Benedikt"
 )
 
 User.create!(
   email: "nenene@nenene.com",
-  password: "123456"
+  password: "123456",
+  username: "Mohammad"
 )
 
 User.create!(
   email: "ilmio@ilmio.com",
-  password: "123456"
+  password: "123456",
+  username: "Nadine"
 )
 
 User.create!(
   email: "adam.ternskof@gmail.com",
-  password: "123456"
+  password: "123456",
+  username: "Janine"
 )
 
+
+User.create!(
+  email: "smart.boy@gmail.com",
+  password: "123456",
+  username: "Jane"
+)
 
 Fabric.create!(
   user_id: 1,
