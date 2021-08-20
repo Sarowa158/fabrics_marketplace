@@ -24,15 +24,18 @@
 #   contact_person: "Utz Seematter",
 #   avatar: "https://source.unsplash.com/random"
 # )
+User.destroy_all
+Fabric.destroy_all
+
 
 User.create!(
-  email: "newname@newname.com",
+  email: "benedikt@sarowa.de",
   password: "123456",
   username: "Benedikt"
 )
 
 User.create!(
-  email: "nenene@nenene.com",
+  email: "mohammed@company.com",
   password: "123456",
   username: "Mohammad"
 )
