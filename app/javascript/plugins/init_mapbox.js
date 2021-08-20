@@ -7,7 +7,7 @@ const initMapbox = () => {
   const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+  map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 1000 });
 };
 
 const addMarkersToMap = (map, markers) => {
@@ -28,8 +28,7 @@ markers.forEach((marker) => {
       container: 'map',
       style: 'mapbox://styles/fabrizio-onorio/cksirrxir610l17oc258971hn'
     });
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-                                      mapboxgl: mapboxgl }));
+
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers)
     fitMapToMarkers(map, markers);
