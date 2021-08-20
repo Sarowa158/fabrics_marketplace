@@ -89,7 +89,8 @@ body {
     margin-top: 30px;
     font-size: 36px;
     font-weight: bold;
-    color: #DC851F
+    color: #DC851F;
+    margin-bottom: 30px;
 
 }
 
@@ -159,4 +160,75 @@ body {
   margin: 10px 0px;
   padding: 5px 10px;
 
+}
+
+.meet-the-team {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.one-member img {
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #dc851f;
+}
+
+  .one-member h3{
+    font-size: 26px;
+    margin-top: 25px;
+    font-weight: bold;
+    color: #2e86ab;
+  }
+
+  .one-member p {
+    font-size: 18px;
+  }
+  .one-member {
+    text-align: center;
+  }
+
+  .descrip {
+    font-size: 17.5px;
+  }
+
+
+@media (max-width:850px){
+        .cover h1{
+          font-size: 25px;
+          padding: 3px 5px;
+}
+
+        .cover h3 {
+      font-size: 22px;
+      padding: 3px 5px;
+}
+
+        .cover a {
+          font-size: 20px;
+          padding: 6px 10px;
+
+      }
+
+   }
+
+   @keyframes pulse-purple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 133, 31, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 133, 31, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 133, 31, 0);
+  }
+}
+
+.blob {
+  background: rgba(220, 133, 31, 1);
+  box-shadow: 0 0 0 0 rgba(220, 133, 31, 1);
+  animation: pulse-purple 2s infinite;
 }

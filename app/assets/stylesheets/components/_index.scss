@@ -5,6 +5,9 @@
 @import "map";
 @import "card";
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .all-body {
   display: flex;
@@ -15,6 +18,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 170px;
+  min-width: 150px;
   color: black;
   text-decoration: none;
 }
@@ -23,11 +27,21 @@
   height: 60%;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #DC851F
 }
 
 .card-trip h2 {
   font-size: 14px;
   font-weight: bold;
+  margin-top: 20px;
   margin: 3px;
 }
 
@@ -40,6 +54,7 @@
 }
 
 .card-trip .card-trip-infos {
+
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -50,18 +65,20 @@
 .card-trip-infos {
   display: flex;
   align-items: flex-end;
+  margin: 0;
+  align-items: center;
 }
 
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
+  top: -30px;
   width: 40px;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
 }
@@ -70,7 +87,7 @@
 
 @media(max-width: 992px) {
   .cards-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
