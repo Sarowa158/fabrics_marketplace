@@ -20,9 +20,11 @@
         <%# <img src="https://i.ibb.co/fDhQPPt/logo.png" alt="Logo"> %>
         <div class="right-links">
             <% if user_signed_in? %>
+              <%= link_to "All fabrics", fabrics_path %>
               <%= link_to "New Fabric", new_fabric_path %>
               <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
             <% else %>
+              <%= link_to "All fabrics", fabrics_path %>
               <%= link_to "Sign in", new_user_session_path %>
               <%= link_to "Sign up", new_user_registration_path %>
             <% end %>

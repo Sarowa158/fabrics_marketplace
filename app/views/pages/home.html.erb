@@ -3,35 +3,58 @@
             <h1>For the good of all</h1>
             <h3>Helping you stay on your budget while saving the envirmount</h3>
             <br>
-            <%= link_to "fabrics", fabrics_path %>
+            <a href="#responsibilities">Learn more</a>
         </div>
         <div class="big-title">Latest fabrics</div>
 
-           <div class="cards-container">
-              <% @fabrics.last(4).each do |fab| %>
-              <%= link_to fabric_path(fab) do %>
-                <div class="card-trip", fabric_path >
-                  <img src='https://images.unsplash.com/photo-1622532470022-24107cac5ef3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80' />
-                  <div class="card-trip-infos">
-                    <div>
-                      <h2><%=  fab.quality %></h2>
-                      <p><%= fab.content %></p>
+  <div class="cards-container">
 
-                    </div>
-                    <h2 class="card-trip-pricing"><%= fab.price %> $</h2>
-                    <img src="https://images.unsplash.com/photo-1532490389938-2856e3f1560a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-trip-user avatar-bordered" />
-                  </div>
-                </div>
-              <% end %>
-              <% end %>
+    <% @fabrics.each do |fab| %>
+      <%= link_to (fabric_path(fab)) do %>
+      <div class="card-trip">
 
+          <% if fab.photo.attached? %>
+            <%= cl_image_tag fab.photo.key, class: 'img-fluid' %>
+          <% else %>
+            <img src='https://images.unsplash.com/photo-1622532470022-24107cac5ef3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80' />
+          <% end %>
+
+
+          <div class="card-trip-infos">
+            <div>
+              <h2><%=  fab.material %></h2>
 
             </div>
+            <h2 class="card-trip-pricing"><%= fab.price.to_i %> $</h2>
+            <img src="https://images.unsplash.com/photo-1532490389938-2856e3f1560a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-trip-user avatar-bordered" />
+          </div>
 
-        <div class="big-title">About us</div>
-        <img src="https://i.ibb.co/TDyxWpQ/team.jpg" alt="Team photo" class="team-photo";>
-        <div id="about-us">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga tenetur officiis, esse eveniet ipsum quas possimus eligendi consectetur eaque cumque magni quasi? Eum quibusdam at eos excepturi provident explicabo natus</p>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+   <div class="big-title" id="responsibilities">Our responsibility towards environment</div>
+        <div class="descrip">
+        <p>Second to oil, the clothing and textile industry is the largest polluter in the world, That information pushed us to start our project to make use of the unesed fabrics in the factories, which can save much CO2 emissions, in other words: saving the future of earth.</p>
+        <p>Fabric Marketplace connects big and small Fabric factories directly to any potential buyers, helping both sides save money and the planet 🌎</p>
+        </div>
+        <div class="big-title">Behind the scenes</div>
+        <div class="meet-the-team">
+          <div class="one-member">
+            <img class="blob" src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1625501279/jnhr5hnp8cuzrkyjyini.jpg" alt="Mohammad">
+            <h3>Mohammad Alshahwan</h3>
+            <p>Does nothing, claims he did eveything</p>
+          </div>
+          <div class="one-member">
+            <img class="blob" src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1625320718/up6jpvhkwhjaqlpkjkzm.jpg" alt="Benedikt">
+            <h3>Benedikt Albertsen</h3>
+            <p>Does Front-end, and comes with weird ideas</p>
+          </div>
+          <div class="one-member">
+            <img class="blob" src="https://avatars.githubusercontent.com/u/78529684?v=4" alt="Fabrizio">
+            <h3>Fabrizio Onorio</h3>
+            <p>Does Back-end, and drink much coffee</p>
+          </div>
         </div>
         <div class="footer">
             <div class="footer-raw">
