@@ -18,7 +18,18 @@ class FabricsController < ApplicationController
 
   def show
     @fabric = Fabric.find(params[:id])
+
     @me = current_user
+
+
+    @markers = [
+      {
+        lat: @fabric.latitude,
+        lng: @fabric.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { fabric: @fabric })
+      }
+    ]
+
   end
 
   def new

@@ -7,6 +7,10 @@ class PagesController < ApplicationController
   def dashboard
     @user = User.where(id: params[:query])
     @fabrics = Fabric.where(user: @user)
+
     @me = current_user
+
+    @purchases = @user.purchases
+
   end
 end
