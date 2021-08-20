@@ -37,6 +37,12 @@
 
 
         <p><%= @fabric.user.company %></p>
-         <%= link_to "Buy now", purchases_path, class: "btn btn-primary" %>
+         <%= link_to "Buy now", create_purchase_path(@fabric), method: :post, class: "btn btn-primary" %>
+
   </div>
 </div>
+
+
+
+         <%# <%= simple_form_for [@purchase, @fabric] do |f| %> %>
+        <%# <%= f.submit %> %>
