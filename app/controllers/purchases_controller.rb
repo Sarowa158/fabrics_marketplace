@@ -1,4 +1,12 @@
 class PurchasesController < ApplicationController
+
+  def buy_list
+  end
+
+  def show
+    @fabric = Fabric.find(params[:id])
+    @me = current_user
+
   def create
     @purchase = Purchase.new
     @purchase.user = current_user
@@ -10,6 +18,7 @@ class PurchasesController < ApplicationController
         render new_user_session_path
       end
     end
+
   end
 end
 
