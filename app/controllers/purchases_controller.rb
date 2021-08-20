@@ -4,5 +4,6 @@ class PurchasesController < ApplicationController
 
   def show
     @fabric = Fabric.find(params[:id])
+    @me = current_user
   end
 end

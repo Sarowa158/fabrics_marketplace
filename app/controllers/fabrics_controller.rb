@@ -13,14 +13,17 @@ class FabricsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { fabric: fabric })
       }
     end
+    @me = current_user
   end
 
   def show
     @fabric = Fabric.find(params[:id])
+    @me = current_user
   end
 
   def new
     @fabric = Fabric.new
+    @me = current_user
   end
 
   def create
@@ -31,6 +34,7 @@ class FabricsController < ApplicationController
     else
       render :new
     end
+    @me = current_user
   end
 
   private
