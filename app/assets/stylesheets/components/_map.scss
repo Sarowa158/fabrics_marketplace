@@ -5,7 +5,7 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(255, 167, 49);
+  color: rgb(255, 167, 49);
 }
 
 #map {
@@ -14,5 +14,4 @@
   max-width: 50%;
   top: 0;
   margin-left: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

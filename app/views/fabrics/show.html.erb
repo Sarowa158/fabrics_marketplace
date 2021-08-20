@@ -1,33 +1,32 @@
-<div class="all-body">
+<div class="all-body mb-3">
   <div class="container">
       <div>
-        <h1 class="fs-3"><%= @fabric.content %></h1>
+        <h1 class="fs-3"><%= "#{@fabric.content.capitalize}:" %></h1>
       </div>
     <div class="row">
       <div class="col-6">
         <div class="flex-container">
           <div class="flex-item">
-            <%= image_tag "length.png", class: "img-show-page"%>
-            <%= @fabric.length %>
+          <%= "Quality: #{@fabric.quality}" %>
           </div>
           <div class="flex-item">
-            <%= image_tag "quality.png", class: "img-show-page" %>
-          <%= @fabric.quality %>
+            <%= "Material: #{@fabric.material}" %>
           </div>
           <div class="flex-item">
-            <%= image_tag "pricetag.png", class: "img-show-page" %>
-            <%= @fabric.price.to_i %>
+            <%= "Color: #{@fabric.color}" %>
           </div>
           <div class="flex-item">
-            <%= image_tag "color.png", class: "img-show-page" %>
-            <%= @fabric.color %>
+            <%= "Length: #{@fabric.length.to_i} mt." %>
+          </div>
+          <div class="flex-item mt-5">
+            <strong><%= "Price: #{@fabric.price.to_i} $" %></strong>
           </div>
         </div>
       </div>
       <div class="col-6">
         <div class="flex-container">
           <% if @fabric.photo.attached? %>
-            <%= cl_image_tag(@fabric.photo.key, width: 200, height: 200, crop: :fill, class:'img-fluid') %>
+            <%= cl_image_tag(@fabric.photo.key, class:'img-fluid') %>
           <% else %>
             <img class="img-fluid" src='<%= @fabric.link %>' />
           <% end %>
@@ -37,8 +36,17 @@
 
 
         <p><%= @fabric.user.company %></p>
-         <%= link_to "Buy now", create_purchase_path(@fabric), method: :post, class: "btn btn-primary" %>
 
+         <%= link_to "Buy now", create_purchase_path(@fabric), method: :post, class: "btn btn-primary mb-2" %>
+          <div class="flex-item my-2 mx-3">
+            <small><%= "Address: #{@fabric.address}" %></small>
+          </div>
+            <div id="map" class="mb-4 mt-3"
+
+                style="width: 800px; height: 400px;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+            </div>
   </div>
 </div>
 

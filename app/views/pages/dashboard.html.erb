@@ -1,37 +1,51 @@
-        <div class="profile-box">
-            <div class="profile-user">
-              <img src="https://source.unsplash.com/160x160/?fabrics" alt="Profile photo">
+<div class="profile-box">
+    <div class="profile-user">
+      <img src="https://source.unsplash.com/160x160/?fabrics" alt="Profile photo">
 
-                <h3><%= @user[0].username %></h3>
-                <p>Member since <strong><%= @user[0].created_at.strftime("%d %b %Y") %></strong>, Owner at her fabric company, Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque molestias hic, libero sequi commodi quasi exercitationem unde culpa suscipit tenetur necessitatibus. Beatae repellendus dicta modi nostrum magnam. At, fugiat aliquid.</p>
+        <h3><%= @user[0].username %></h3>
+        <p>Member since <strong><%= @user[0].created_at.strftime("%d %b %Y") %></strong>, Owner at her fabric company, Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque molestias hic, libero sequi commodi quasi exercitationem unde culpa suscipit tenetur necessitatibus. Beatae repellendus dicta modi nostrum magnam. At, fugiat aliquid.</p>
+    </div>
+    <div class="profile-product">
+      <div class="big-title">Latest added products</div>
+  <div class="cards-container">
+    <% @fabrics.each do |fab| %>
+      <%= link_to (fabric_path(fab)) do %>
+      <div class="card-trip">
+
+            <% if fab.photo.attached? %>
+            <%= cl_image_tag fab.photo.key, class: 'img-fluid' %>
+          <% else %>
+            <img src='<%= fab.link %>' />
+          <% end %>
+
+
+          <div class="card-trip-infos">
+            <div>
+              <h2><%=  fab.material %></h2>
+
             </div>
-            <div class="profile-product">
-              <div class="big-title">Latest added products</div>
-          <div class="cards-container">
-            <% @fabrics.each do |fab| %>
-              <%= link_to (fabric_path(fab)) do %>
-              <div class="card-trip">
-
-                    <% if fab.photo.attached? %>
-                    <%= cl_image_tag fab.photo.key, class: 'img-fluid' %>
-                  <% else %>
-                    <img src='<%= fab.link %>' />
-                  <% end %>
-
-
-                  <div class="card-trip-infos">
-                    <div>
-                      <h2><%=  fab.material %></h2>
-
-                    </div>
-                    <h2 class="card-trip-pricing"><%= fab.price.to_i %> $</h2>
-                    <img src="https://images.unsplash.com/photo-1532490389938-2856e3f1560a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-trip-user avatar-bordered" />
-                  </div>
-
-              </div>
-              <% end %>
-            <% end %>
+            <h2 class="card-trip-pricing"><%= fab.price.to_i %> $</h2>
+            <img src="https://images.unsplash.com/photo-1532490389938-2856e3f1560a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-trip-user avatar-bordered" />
           </div>
+
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 <%# raise %>
-            </div>
-        </div>
+    </div>
+</div>
+
+
+
+<!--
+         <% @purchases.each do |purchase| %>
+            <%= purchase.fabric_id.content %>
+            <%= purchase.fabric_id.created_at %>
+            <% if purchase.fabric_id.price == purchase.fabric_id.newprice %>
+              <%= purchase.fabric_id.price%>
+            <% else %>
+              <%= purchase.fabric_id.price %>
+            <% end %>
+          <%end%>
+      -->
