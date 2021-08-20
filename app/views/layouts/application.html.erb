@@ -21,7 +21,7 @@
         <%# <img src="https://i.ibb.co/fDhQPPt/logo.png" alt="Logo"> %>
         <div class="right-links">
             <% if user_signed_in? %>
-              <%= link_to "My profile", dashboard_path(:query => @me.id) %>
+              <%= link_to "My profile", dashboard_path(:query => current_user.id) %>
               <%= link_to "All fabrics", fabrics_path %>
               <%= link_to "New Fabric", new_fabric_path %>
               <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
