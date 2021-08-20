@@ -1,5 +1,25 @@
 @import "home";
+.all-body {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #DC851F
+}
+
+.img-fluid {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 400px;
+  height: 200px;
+}
+
 .flex-container {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -20,4 +40,8 @@
 .item-a {
   justify-self: stretch;
   object-fit: cover;
+}
+
+strong {
+  color: rgba(0, 0, 0, 0.729);
 }

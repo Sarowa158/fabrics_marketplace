@@ -3,5 +3,5 @@
       <% if fabric.photo.attached? %>
         <%= cl_image_tag(@fabric.photo.key, width: 170, crop: :fill, class:'img-fluid') %>
       <% else %>
-        <img src='https://images.unsplash.com/photo-1622532470022-24107cac5ef3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80' width="170" />
+        <img src='<%= fabric.link %>' width="170" />
       <% end %>
