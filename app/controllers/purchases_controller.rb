@@ -1,4 +1,13 @@
 class PurchasesController < ApplicationController
+
+  def buy_list
+  end
+
+  def show
+    @fabric = Fabric.find(params[:id])
+    @me = current_user
+  end
+
   def create
     @purchase = Purchase.new
     @purchase.user = current_user
@@ -16,7 +25,3 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.find(params[:id])
   end
 end
-
-
-# @fabric = Fabric.find(params[:fabric_id])
-    # # @fabric = Fabric.where(@fabric.user == current_user)
