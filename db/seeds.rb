@@ -24,8 +24,10 @@
 #   contact_person: "Utz Seematter",
 #   avatar: "https://source.unsplash.com/random"
 # )
-User.destroy_all
+Purchase.destroy_all
 Fabric.destroy_all
+User.destroy_all
+
 
 
 User.create!(
