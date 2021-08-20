@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
   post "/fabrics/:id/purchases", to: "purchases#create", as: :create_purchase
   get '/dashboard', to: 'pages#dashboard'
+  resources :purchases, only: [:show]
 end

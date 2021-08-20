@@ -32,6 +32,7 @@
       <% end %>
     <% end %>
   </div>
+
 <%# raise %>
     </div>
 </div>
@@ -40,12 +41,12 @@
 
 <!--
          <% @purchases.each do |purchase| %>
-            <%= purchase.fabric_id.content %>
-            <%= purchase.fabric_id.created_at %>
-            <% if purchase.fabric_id.price == purchase.fabric_id.newprice %>
-              <%= purchase.fabric_id.price%>
+            <%= purchase.fabric.content %>
+            <%= purchase.fabric.created_at %>
+            <% if purchase.fabric.price == purchase.fabric.newprice %>
+              <%= purchase.fabric.price%>
             <% else %>
-              <%= purchase.fabric_id.price %>
+              <%= purchase.fabric.price %>
             <% end %>
           <%end%>
       -->
