@@ -7,19 +7,24 @@
       <div class="col-6">
         <div class="flex-container">
           <div class="flex-item">
+          <%= image_tag "quality.png", class:"img-show-page" %>
           <%= "Quality: #{@fabric.quality}" %>
           </div>
           <div class="flex-item">
+          <%= image_tag "material.png", class:"img-show-page" %>
             <%= "Material: #{@fabric.material}" %>
           </div>
           <div class="flex-item">
+          <%= image_tag "color.png", class: "img-show-page fs-3" %>
             <%= "Color: #{@fabric.color}" %>
           </div>
           <div class="flex-item">
+            <%= image_tag "length.png", class:"img-show-page"%>
             <%= "Length: #{@fabric.length.to_i} mt." %>
           </div>
           <div class="flex-item mt-5">
-            <strong><%= "Buy it for only #{@fabric.price.to_i} $" %></strong>
+          <%= image_tag "pricetag.png", class: "img-show-page" %>
+            <strong><%= "Price: #{@fabric.price.to_i} $" %></strong>
           </div>
         </div>
       </div>
